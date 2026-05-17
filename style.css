@@ -614,9 +614,9 @@ body, p, a, .nav-link, .btn {
 }
 
 /* Mobiilissa vielä pienempi */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .brand-title {
-    font-size: 16px;   /* tämä ratkaisee leikkautumisen */
+    font-size: 12px;   /* tämä ratkaisee leikkautumisen */
   }
 }
 
