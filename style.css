@@ -616,7 +616,7 @@ body, p, a, .nav-link, .btn {
 /* Mobiilissa vielä pienempi */
 @media (max-width: 768px) {
   .brand-title {
-    font-size: 24px;   /* tämä ratkaisee leikkautumisen */
+    font-size: 16px;   /* tämä ratkaisee leikkautumisen */
   }
 }
 
