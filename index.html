@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pieni Donitsipuoti</title>
+
+  <!-- Bootstrap (sama kuin About-sivulla) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Oma CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fontit -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body class="etusivu">
+
+<!-- NAVIGAATIO (TÄSMÄLLEEN SAMA KUIN ABOUT-SIVULLA) -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand brand-title" href="index.html">Pieni Donitsipuoti</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Etusivu</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">Keitä me olemme</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Galleria</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Ota yhteyttä</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- DONITSISADE (TAUSTALLA) -->
+<div id="donitsi-container"></div>
+
+<!-- KAAREVA TUMMANHARMAA OTSIKKO -->
+<div class="title-wrapper">
+  <svg viewBox="0 0 500 200" class="arc-title">
+    <path id="curve" d="M 50 150 Q 250 10 450 150" fill="transparent"/>
+    <text width="500">
+      <textPath href="#curve" startOffset="50%" text-anchor="middle">
+        Pieni Donitsipuoti
+      </textPath>
+    </text>
+  </svg>
+</div>
+
+<!-- HERO-KUVA -->
+<img src="back-view-girl-dress-with-bow-her-hair-gray-background.jpg" 
+     class="hero-img" 
+     alt="Hero-kuva">
+
+<p class="hero-subtitle">Käsintehtyjä hiusdonitseja rakkaudella</p>
+
+<a href="gallery.html" class="hero-btn">Tutustu tuotteisiin</a>
+
+<footer class="footer">
+  <p>Pieni Donitsipuoti © 2024</p>
+</footer>
+
+<!-- DONITSISADE -->
+<script>
+  const scrunchies = [
+    "Scrunchie1.png",
+    "Scrunchie2.png",
+    "Scrunchie3.png",
+    "Scrunchie4.png"
+  ];
+
+  if (document.body.classList.contains("etusivu")) {
+    for (let i = 0; i < 50; i++) {
+      let d = document.createElement("img");
+      d.src = scrunchies[Math.floor(Math.random() * scrunchies.length)];
+      d.className = "donitsi-fall";
+
+      d.style.left = Math.random() * 100 + "vw";
+      d.style.animationDuration = (4 + Math.random() * 6) + "s";
+      d.style.width = "40px";
+
+      document.getElementById("donitsi-container").appendChild(d);
+    }
+  }
+</script>
+
+<!-- Bootstrap JS (sama kuin About-sivulla) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

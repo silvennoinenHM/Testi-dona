@@ -1,0 +1,622 @@
+/* YLEINEN */
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* YLÄPALKki */
+.header {
+  background: #ffffff;
+  border-bottom: 2px solid #e5e5e5;
+  padding: 15px 0;
+  position: relative;
+  z-index: 1000; /* YLIMPÄNÄ */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* DONITSISADE TAUSTALLE */
+#donitsi-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1; /* TAUSTA */
+}
+
+.donitsi-fall {
+  position: absolute;
+  top: -120px;
+  width: 40px;
+  animation: fall linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-150px) rotate(0deg); }
+  100% { transform: translateY(120vh) rotate(360deg); }
+}
+
+/* KAAREVA OTSIKKO */
+.title-wrapper {
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+  z-index: 10; /* DONITSIEN EDELLÄ */
+}
+
+.arc-title {
+  width: 100%;
+  max-width: 600px;
+}
+
+.arc-title text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  fill: #333333;
+}
+
+/* HERO-KUVA 3× ISOMPI */
+.hero-img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 10; /* DONITSIEN EDELLÄ */
+}
+
+/* ALAOTSIKKO */
+.hero-subtitle {
+  text-align: center;
+  font-size: 26px;
+  color: #555555;
+  margin-top: -10px;
+  position: relative;
+  z-index: 10;
+}
+
+/* NAPPI */
+.hero-btn {
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 14px 32px;
+  background: #c06b8e;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 10;
+}
+
+.hero-btn:hover {
+  background: #a85775;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #333333;
+  margin-top: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* MOBIILI */
+@media (max-width: 600px) {
+  .arc-title text {
+    font-size: 48px;
+  }
+  .hero-img {
+    max-width: 90%;
+  }
+}
+/* UUSI FONTTI KOKO SIVULLE */
+body, p, a, button, .btn, .nav-link {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* HEMPEÄT VALEAANPUNAISET NAPIT */
+.btn-primary {
+  background-color: #f8dce8;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #e8b6cc;
+  color: #333;
+}
+
+/* HEMPEÄT LAATIKOT (käytetään tulevilla sivuilla) */
+.pink-box {
+  background-color: #f8dce8;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* GALLERIA-KORTIT (tulevaa varten) */
+.card {
+  border: none;
+  border-radius: 15px;
+  background-color: #f8dce8;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  background-color: #e8b6cc;
+}
+
+/* NAVIGAATIO – siistimpi fontti */
+.navbar-brand {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #333;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #333 !important;
+}
+/* Yleinen fontti */
+body, p, a, .nav-link, .btn {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Brändin fontti */
+.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #c06b8e !important;
+}
+
+/* Hempeä laatikko */
+.pink-box {
+  background-color: #f8dce8;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* About-kuva keskelle ja valkoiset reunat */
+.about-img {
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Kortit */
+.pink-card {
+  background-color: #f8dce8;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pink-card:hover {
+  background-color: #f0c9da;
+}
+
+/* Hempeä nappi */
+.btn-primary {
+  background-color: #e8b6cc;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.btn-primary:hover {
+  background-color: #d89ab8;
+}
+
+/* NAVIGAATIO */
+.nav-link {
+  font-weight: 600;
+  color: #333 !important;
+}
+/* NAVIGAATION BRÄNDITEKSTI – ISOMPI + HATTARAPINKKI */
+.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;          /* isompi */
+  color: #f4a9c6 !important; /* hattaravaaleanpunainen */
+  letter-spacing: 1px;
+}
+:root {
+  --hattara-light: #fde6f1;   /* erittäin hempeä vaaleanpunainen */
+  --hattara-mid:   #f9d1e7;   /* hieman tummempi */
+  --hattara-dark:  #f3b3d0;   /* hover-sävy */
+}
+.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 46px;                 /* isompi */
+  color: var(--hattara-mid) !important;
+  letter-spacing: 1px;
+}
+.btn-primary {
+  background-color: var(--hattara-light);
+  border: none;
+  color: #333;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.btn-primary:hover {
+  background-color: var(--hattara-dark);
+}
+.pink-box,
+.pink-card {
+  background-color: var(--hattara-light);
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.pink-card:hover {
+  background-color: var(--hattara-mid);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  flex-grow: 1;       /* tasaa tekstien korkeuden */
+  text-align: center;
+}
+
+.card .btn {
+  margin-top: auto;   /* nappi aina samaan kohtaan */
+}
+.about-img {
+  max-width: 500px;
+  border-radius: 15px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* NAVIGAATION BRÄNDITEKSTI – 2x ISOMPI + HARMAA REUNUS */
+.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px; /* 2x isompi kuin aiemmin */
+  color: #f7c9dd !important; /* hempeä hattaravaaleanpunainen */
+  letter-spacing: 1px;
+
+  /* Harmaa reunus ettei huku taustaan */
+  text-shadow:
+    1px 1px 0 #bbb,
+    -1px 1px 0 #bbb,
+    1px -1px 0 #bbb,
+    -1px -1px 0 #bbb;
+}
+/* NAVIGAATION BRÄNDITEKSTI – 2x ISOMPI + SIIVOTTU ÄÄRIVIIVA */
+.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px; /* 2x isompi */
+  color: #f9d1e7 !important; /* erittäin hempeä vaaleanpunainen */
+  letter-spacing: 1px;
+
+  /* Terävä, ohut harmaa ääriviiva – EI mössöä */
+  text-shadow:
+    -1px -1px 0 #d0d0d0,
+     1px -1px 0 #d0d0d0,
+    -1px  1px 0 #d0d0d0,
+     1px  1px 0 #d0d0d0;
+}
+/* NAVIGAATION BRÄNDITEKSTI – alkuperäinen tyyli, mutta 2x isompi */
+.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px; /* alkuperäinen oli ~32px → nyt 2x */
+  color: #f7c9dd !important; /* hempeä vaaleanpunainen */
+  letter-spacing: 1px;
+}
+.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 128px; /* alkuperäinen oli 32px → nyt 4x isompi */
+  color: #f7c9dd !important; /* hempeä vaaleanpunainen */
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 128px; /* alkuperäinen oli 32px → nyt 4x isompi */
+  color: #f7c9dd !important; /* hempeä vaaleanpunainen */
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.navbar-brand.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px !important; /* 4x isompi */
+  color: #f7c9dd !important;   /* hempeä vaaleanpunainen */
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-shadow: none !important;
+  line-height: 1;
+}
+/* Scrunchie-nimet vintage-tyylillä */
+.scrunchie-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  text-align: center;
+  color: #c06b8e;
+  margin-bottom: 10px;
+}
+
+/* Scrunchie-kuvaukset */
+.scrunchie-desc {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Hempeät kortit */
+.pink-card {
+  background-color: #fde6f1;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pink-card:hover {
+  background-color: #f9d1e7;
+}
+
+/* Hempeä nappi */
+.btn-primary {
+  background-color: #f7c9dd;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.btn-primary:hover {
+  background-color: #f3b3d0;
+}
+/* Kaikki kortit samaan korkeuteen */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Kortin sisus venyy tasaisesti */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Nimi linjaan */
+.scrunchie-name {
+  min-height: 60px; /* pakottaa kaikki nimet samaan korkeuteen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Kuvaus linjaan */
+.scrunchie-desc {
+  min-height: 120px; /* pakottaa kuvaukset samaan korkeuteen */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* Nappi aina pohjalle */
+.card .btn {
+  margin-top: auto;
+}
+/* Kortti venyy tasaisesti */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Kortin sisus venyy */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* NIMET LINJAAN */
+.scrunchie-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  text-align: center;
+  color: #c06b8e;
+
+  min-height: 60px;      /* PAKOTTAA kaikki nimet samaan korkeuteen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* KUVAAUKSET LINJAAN */
+.scrunchie-desc {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+
+  min-height: 140px;     /* PAKOTTAA kaikki kuvaukset samaan korkeuteen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+/* Nappi pohjalle */
+.card .btn {
+  margin-top: auto;
+}
+.gallery-heading {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  color: #c06b8e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Contact box */
+.contact-box {
+  background-color: #fde6f1;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Sky Candyfloss -donitsi taustalla */
+.zigzag-donut {
+  position: fixed;
+  width: 180px;
+  top: 0;
+  left: 0;
+  opacity: 0.95;        /* pehmeä taustaelementti */
+  z-index: -1;          /* menee kaikkien laatikoiden taakse */
+  pointer-events: none; /* ei voi klikata */
+  animation: zigzag 12s linear infinite;
+}
+
+/* Siksak-liike */
+@keyframes zigzag {
+  0%   { transform: translate(0vw, 0vh); }
+  20%  { transform: translate(70vw, 10vh); }
+  40%  { transform: translate(10vw, 40vh); }
+  60%  { transform: translate(80vw, 60vh); }
+  80%  { transform: translate(20vw, 85vh); }
+  100% { transform: translate(0vw, 0vh); }
+}
+/* Etusivun taustadonitsi */
+.index-donut {
+  position: fixed;
+  width: 200px;
+  top: 0;
+  left: 0;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+  animation: zigzag 12s linear infinite;
+}
+
+/* Sama animaatio kuin contact-sivulla */
+@keyframes zigzag {
+  0% { transform: translate(0,0); }
+  20% { transform: translate(70vw,10vh); }
+  40% { transform: translate(10vw,40vh); }
+  60% { transform: translate(80vw,60vh); }
+  80% { transform: translate(20vw,85vh); }
+  100% { transform: translate(0,0); }
+}
+
+/* Etusivun otsikot */
+.hero-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  color: #c06b8e;
+}
+
+.hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-top: 10px;
+}
+#donitsi-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.donitsi-fall {
+  position: absolute;
+  z-index: -1;
+}
+#donitsi-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.donitsi-fall {
+  position: absolute;
+  z-index: -1;
+}
+.brand-title {
+  font-size: 26px;   /* pienempi mutta edelleen näyttävä */
+  font-family: 'Great Vibes', cursive;
+  color: #d47aa8;
+}
+
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 22px;  /* mobiilissa vielä hieman pienempi */
+  }
+}
+.brand-title {
+  font-size: 26px;   /* pienempi mutta edelleen näyttävä */
+  font-family: 'Great Vibes', cursive;
+  color: #d47aa8;
+}
+
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 22px;  /* mobiilissa vielä hieman pienempi */
+  }
+}
+/* NAVBARIN pinkki Pieni Donitsipuoti -teksti */
+.brand-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;     /* pienempi desktopissa */
+  color: #d47aa8;
+}
+
+/* Mobiilissa vielä pienempi */
+@media (max-width: 768px) {
+  .brand-title {
+    font-size: 24px;   /* tämä ratkaisee leikkautumisen */
+  }
+}
+
